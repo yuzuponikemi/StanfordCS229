@@ -32,7 +32,7 @@ sigma = zeros(1, size(X, 2));
 mu = X - mean(X);
 sigma = std(X);
 
-X_norm = mu/sigma;
+X_norm = mu./sigma;
 
 
 
