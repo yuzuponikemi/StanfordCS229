@@ -26,11 +26,11 @@ X = [ones(m, 1) X];
 %
 
 
-atwo = X*Theta1';
-atwo = sigmoid([ones(size(atwo,1),1) atwo]);
+atwo = sigmoid(X*Theta1');
+atwo = [ones(size(atwo,1),1) atwo];
 
 
-[maximum, p] = max(sigmoid(atwo*Theta2'), [], 2);
+[maximum, p] = max(atwo*Theta2', [], 2);
 
 
 
